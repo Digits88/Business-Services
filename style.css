@@ -1,0 +1,138 @@
+/*
+Theme Name:     CALS - Business Services
+Theme URI:      http://cals.wisc.edu/developers
+Description:    Child theme for the CALS WP Theme
+Author:         Rich Donohue
+Author URI:     http://www.wisc.edu/directories/person.php?name=ALBERT%20M%20NEMEC
+Template:       calswptheme
+Version:        0.1.0
+*/
+
+@import url("../calswptheme/style.css");
+
+h2 {
+	font-size: 1.2em;
+}
+strong, b {
+	font-weight: bold;
+}
+em, i {
+	font-style: italic;
+}
+
+
+body {
+	background: url("images/CALS_bg.jpg"), url("images/ticks.png");
+	background-repeat: repeat-x, repeat;
+}
+.collegeFeature {
+	display: none;
+}
+
+/* NAVIGATION */
+
+#access {
+	background: none;
+	position: relative;
+	top: 16px;
+}
+#menu-main-navigation {
+	height: 36px;
+}
+#access ul {
+	position: relative;
+}
+#access ul li {
+	max-width: 14%;
+	height: 100%;
+	margin-right: 5px;
+	background-color: #2B2A28;
+	padding: 4px 0
+}
+#access ul li a {
+	line-height: 1.4em;
+	text-align: left;	
+	font-weight: 400;
+	height: 100%;
+}
+#access ul ul {
+	top: 36px;
+	width: 140px;
+}
+#access ul li ul li {
+	display: block;
+	float: none;
+	background: none;
+}
+#access ul ul a {
+	width: 140px;
+}
+#access ul ul ul {
+	display: none;
+}
+#nav_sidebar .children li a {
+	padding-left: 30px
+}
+
+
+/*
+	Page specific
+*/
+.entry-content h2#pageSub {
+	font-size: 1.3em;
+	font-style: italic;
+	font-weight: normal;
+	color: #777;
+}
+
+.widget-title {
+	line-height: 1.7em;
+}
+
+.textwidget p {
+	line-height: 1.5em;
+}
+
+.whitebox {
+	padding: 0 8px;
+	/*margin: 0 auto 20px;*/
+	margin-bottom: 40px;
+	background: white;
+	width: 80%;
+	border: 1px solid #f1f1f1;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	/*float: left;*/
+}
+.whitebox:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+.contact-bio {
+	padding: 10px 8px 6px;
+	/*margin: 0 auto 20px;*/
+	margin: 0 8px 20px 0;
+	background: white;
+	width: 29%;
+	border: 1px solid #f1f1f1;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	float: left;
+}
+h3 em {
+	font-weight: normal;
+}
+ul.contact-info  {
+	margin: -10px 0 8px 0;
+}
+ul.contact-info li {
+	list-style-type: none;
+}
+.contact-depart li {
+	list-style-type: disc;
+}

@@ -41,6 +41,7 @@ body {
 }
 #access ul {
 	position: relative;
+	display: none;
 }
 #access ul li {
 	max-width: 14%;

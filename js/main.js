@@ -88,6 +88,7 @@ $(function() {
 		
 
 		$(".page-id-13 section").css("display","none");
+		$("#sub-nav a").removeClass('page-nav-selected');
 
 
 

@@ -1,6 +1,6 @@
 <?php
 
-	remove_filter( 'the_content', 'wpautop' );
+	// remove_filter( 'the_content', 'wpautop' );
 
 	function whitebox_func( $atts, $content = null ) {
 

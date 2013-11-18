@@ -10,6 +10,15 @@ Version:        0.1.0
 
 @import url("../calswptheme/style.css");
 
+
+
+body {
+	background: url("images/CALS_bg.jpg"), url("images/ticks.png");
+	background-repeat: repeat-x, repeat;
+}
+h1 {
+margin-bottom: 0.6em;	
+}
 h2 {
 	font-size: 1.2em;
 }
@@ -20,16 +29,14 @@ em, i {
 	font-style: italic;
 }
 
-
-body {
-	background: url("images/CALS_bg.jpg"), url("images/ticks.png");
-	background-repeat: repeat-x, repeat;
+#content {
+	min-height: 400px;
 }
 .collegeFeature {
 	display: none;
 }
 
-/* NAVIGATION */
+/* MAIN NAVIGATION */
 
 #access {
 	background: none;
@@ -76,6 +83,11 @@ body {
 #access ul ul ul {
 	left: 136px;
 }
+
+#content nav {
+	background: none;
+}
+
 
 /*
 	Page specific
@@ -137,4 +149,63 @@ ul.contact-info li {
 }
 .contact-depart li {
 	list-style-type: disc;
+}
+
+.page-id-13 section > h2 {
+	display: inline-block;
+}
+
+#sub-nav {
+	width: 30%;
+	float: right;
+	margin-left: 15px;
+}
+#sub-nav ul {
+	list-style: none;
+}
+#sub-nav ul li:before {
+    content: "";
+    border-color: transparent #CE9E56;
+    border-style: solid;
+    border-width: 0.35em 0 0.35em 0.45em;
+    display: block;
+    height: 0;
+    width: 0;
+    left: -1em;
+    top: 1.2em;
+    position: relative;
+    transform:rotate(180deg);
+}
+#sub-nav-title {
+
+}
+#page-intro {
+	padding: 10px 8px;
+	/*margin: 0 auto 20px;*/
+	margin-bottom: 40px;
+	background: white;
+	width: 63%;
+	float: left;
+	border: 1px solid #f1f1f1;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+#page-intro-but {
+	display: inline-block;
+	padding: 3px 8px;
+	background: linear-gradient(to bottom, #CE9E56 0%, #D28E19 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+#page-intro-but:hover {
+	opacity: .8;
+}
+#page-intro-but a {
+	color: white;
+}
+#page-intro-but a:hover {
+	border-bottom: none;
+}
+.page-nav-selected {
+	color: #44BBFF;
+	font-weight: bold;
 }

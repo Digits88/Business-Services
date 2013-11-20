@@ -1,10 +1,28 @@
-//JS goes here!
-
 $(function() {
 
-	$(".page-id-13 section").hide();
+
+	$(".page section").hide();
 	var currentSelection = "";
-	$("#page-intro-but").hide();
+	
+	if(window.location.hash) {
+
+		window.scrollTo(0, 0);
+
+		currentSelection = window.location.hash;
+		$("#page-intro-but").fadeIn();
+
+		$("#page-intro").hide();
+
+		$(currentSelection).css('opacity', 0)
+		  .slideDown('slow')
+		  .animate(
+		    { opacity: 1 },
+		    { queue: false, duration: 'slow' }
+		  );
+
+		  // change the sub-nav to reflect current state
+
+	}
 	
 	$("#sub-nav a").on("click", function(e) {
 
@@ -30,15 +48,11 @@ $(function() {
 							    { queue: false, duration: 'fast' }
 							  );
 					    }
-					});
 
-			
-			
+					});
 		}
 		
 		if(currentSelection !== $(this).attr('href')) {
-
-
 
 			if(!currentSelection) {
 				currentSelection = $(this).attr('href');
@@ -48,6 +62,8 @@ $(function() {
 				    { opacity: 1 },
 				    { queue: false, duration: 'slow' }
 				  );
+
+				history.replaceState(null, '', $(this).attr('href'));
 			
 			} else {
 
@@ -62,6 +78,8 @@ $(function() {
 				    { opacity: 1 },
 				    { queue: false, duration: 'slow' }
 				  );
+
+				history.replaceState(null, '', $(this).attr('href'));
 			}
 		}
 
@@ -87,12 +105,11 @@ $(function() {
 		currentSelection = '';
 		
 
-		$(".page-id-13 section").css("display","none");
+		$(".page section").css("display","none");
 		$("#sub-nav a").removeClass('page-nav-selected');
 
-
+		history.replaceState(history.state, '', ' ');
 
 	});
-
 
 });

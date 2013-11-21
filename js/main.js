@@ -9,104 +9,57 @@ $(function() {
 		window.scrollTo(0, 0);
 
 		currentSelection = window.location.hash;
-		$("#page-intro-but").fadeIn();
+		$("#page-intro-but").show();
 
 		$("#page-intro").hide();
 
-		$(currentSelection).css('opacity', 0)
-		  .slideDown('slow')
-		  .animate(
-		    { opacity: 1 },
-		    { queue: false, duration: 'slow' }
-		  );
-
-		  // change the sub-nav to reflect current state
+		$(currentSelection).show();
 
 	}
 	
 	$("#sub-nav a").on("click", function(e) {
 
 		e.preventDefault();
+		$("#page-intro-but").show();
+		if(currentSelection && currentSelection !== $(this).attr('href')) {
+			$(currentSelection).hide();
 
-		$("#sub-nav a").removeClass('page-nav-selected');
-		$(this).addClass('page-nav-selected');
+			  currentSelection = $(this).attr('href');
 
-		if($("#page-intro-but").is(":visible")) {
+			$(currentSelection).show();
 
-			// don't do anything
-				
+			history.replaceState(null, '', currentSelection);
+
 		} else {
-			$("#page-intro").slideUp('fast')
-					  .animate(
-					    { opacity: 0 },
-					    { queue: false, duration: 'fast',
-					    complete: function (){
-					    	$("#page-intro-but").css('opacity', 0)
-							  .slideDown('fast')
-							  .animate(
-							    { opacity: 1 },
-							    { queue: false, duration: 'fast' }
-							  );
-					    }
+			currentSelection = $(this).attr('href');
 
-					});
+			$("#page-intro").hide();
+			
+
+			$(currentSelection).show();
+
+			history.replaceState(null, '', currentSelection);
 		}
 		
-		if(currentSelection !== $(this).attr('href')) {
+		
+		$("#sub-nav a.page-nav-selected").removeClass('page-nav-selected');
 
-			if(!currentSelection) {
-				currentSelection = $(this).attr('href');
-				$(currentSelection).css('opacity', 0)
-				  .slideDown('slow')
-				  .animate(
-				    { opacity: 1 },
-				    { queue: false, duration: 'slow' }
-				  );
+		$(this).addClass('page-nav-selected');
 
-				history.replaceState(null, '', $(this).attr('href'));
-			
-			} else {
-
-				$(currentSelection).slideUp('slow').animate(
-				    { opacity: 0 },
-				    { queue: false, duration: 'slow' }
-				  );
-				currentSelection = $(this).attr('href');
-				$(currentSelection).css('opacity', 0)
-				  .slideDown('slow')
-				  .animate(
-				    { opacity: 1 },
-				    { queue: false, duration: 'slow' }
-				  );
-
-				history.replaceState(null, '', $(this).attr('href'));
-			}
-		}
-
+		
+		
 	});
 
 	$("#page-intro-but").on("click", function(e) {
 
 		e.preventDefault();
-		$(this).slideUp('fast')
-			  .animate(
-			    { opacity: 0 },
-			    { queue: false, duration: 'fast',
-			    complete: function() {
-					$("#page-intro").css('opacity', 0)
-						  .slideDown('fast')
-						  .animate(
-						    { opacity: 1 },
-						    { queue: false, duration: 'fast' }
-						  );
-						 }
-				});
+		$(this).hide();
+		$("#page-intro").show();
 
 		currentSelection = '';
 		
-
 		$(".page section").css("display","none");
-		$("#sub-nav a").removeClass('page-nav-selected');
+		$("#sub-nav a.page-nav-selected").removeClass('page-nav-selected');
 
 		history.replaceState(history.state, '', ' ');
 

@@ -32,7 +32,7 @@ get_header(); ?>
 					$loop = new WP_Query( $args );
 				?>
 				<div id="sub-nav">
-					<!-- <h3 id="sub-nav-title">page resources:</h3> -->
+
 					<ul>
 
 					<?php while ( $loop->have_posts() ) : $loop->the_post();
@@ -52,6 +52,7 @@ get_header(); ?>
 					</section>
 
 				<?php endwhile; ?>
+				<?php wp_reset_query(); ?> 
 					
 				
 			</div><!-- #content -->

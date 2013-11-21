@@ -41,7 +41,6 @@
 					'name' => __( 'Accounting' ),
 					'singular_name' => __( 'Accounting' )
 				),
-			'taxonomies' => array('category'), 
 			'public' => true,
 			'has_archive' => true,
 			)
@@ -53,7 +52,7 @@
 					'name' => __( '136 Funds' ),
 					'singular_name' => __( '136 Funds' )
 				),
-			'taxonomies' => array('category'), 
+			// 'taxonomies' => array('category'), 
 			'public' => true,
 			'has_archive' => true,
 			)

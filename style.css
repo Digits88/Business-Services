@@ -40,55 +40,36 @@ em, i {
 
 #access {
 	background: none;
-	position: relative;
-	top: 16px;
+	box-shadow: none;
+	margin: 25px auto 0;	
+	background: rgba(255, 255, 255, 0.1);
+	color: white;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 4px;
 }
-#menu-main-navigation {
-	height: 36px;
-}
-#access ul {
-	position: relative;
-}
-#access ul li {
-	max-width: 14%;
-	height: 100%;
-	margin-right: 5px;
-	background-color: #2B2A28;
-	padding: 4px 0
-}
-#access ul li a {
-	line-height: 1.4em;
-	text-align: left;	
+ul#menu-main-navigation.menu li a {
+	color: white;
 	font-weight: 400;
-	height: 100%;
+}
+ul#menu-main-navigation.menu li a:hover {
+	background: rgba(210, 210, 210, .1);
+}
+ul#menu-main-navigation.menu li.current-menu-item a {
+	background: rgba(210, 210, 210, .1); 
 }
 #access ul ul {
-	top: 36px;
-	width: 140px;
-}
-#access ul li ul li {
-	display: block;
-	float: none;
-	background: none;
-}
-#access ul ul a {
-	width: 140px;
-}
-#access ul ul ul {
 	display: none;
+}
+#content nav {
+	background: none;
 }
 #nav_sidebar .children li a {
 	padding-left: 30px
 }
-#access ul ul ul {
-	left: 136px;
+#access.fixedNav  {
+	background: #323232;
+	border-radius: 0;
 }
-
-#content nav {
-	background: none;
-}
-
-
 /*
 	Page specific
 */
@@ -162,6 +143,9 @@ ul.contact-info li {
 }
 #sub-nav ul {
 	list-style: none;
+}
+#sub-nav ul li {
+	line-height: 1.3;
 }
 #sub-nav ul li:before {
     content: "";

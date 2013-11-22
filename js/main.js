@@ -1,7 +1,5 @@
 $(function() {
 
-
-	$(".page section").hide();
 	var currentSelection = "";
 	
 	if(window.location.hash) {
@@ -14,6 +12,8 @@ $(function() {
 		$("#page-intro").hide();
 
 		$(currentSelection).show();
+
+		$('#sub-nav a[href='+currentSelection+']').addClass('page-nav-selected');
 
 	}
 	
@@ -45,8 +45,6 @@ $(function() {
 		$("#sub-nav a.page-nav-selected").removeClass('page-nav-selected');
 
 		$(this).addClass('page-nav-selected');
-
-		
 		
 	});
 

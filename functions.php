@@ -1,6 +1,6 @@
 <?php
 
-	// remove_filter( 'the_content', 'wpautop' );
+	remove_filter( 'the_content', 'wpautop' );
 
 	function whitebox_func( $atts, $content = null ) {
 
@@ -18,6 +18,22 @@
 
 	add_shortcode( 'contact-bio', 'contact_bio_func' );
 
+	function explanation_func( $atts, $content = null ) {
+
+		return '<div class="page-explanation">' . $content . '</div>';
+
+	}
+
+	add_shortcode( 'explanation', 'explanation_func' );
+
+	function pageInfo_func( $atts, $content = null ) {
+
+		return '<div class="page-info">' . $content . '</div>';
+
+	}
+
+	add_shortcode( 'pageinfo', 'pageInfo_func' );
+
 	function list_links_func( $cat ) {
 
 		 return wp_list_bookmarks(
@@ -31,14 +47,13 @@
 	add_shortcode( 'list_links', 'list_links_func' );
 
 
-
 	add_action( 'init', 'create_post_type' );
 
 	function create_post_type() {
 		register_post_type( 'accounting',
 			array(
 				'labels' => array(
-					'name' => __( 'Accounting' ),
+					'name' => __( 'accounting' ),
 					'singular_name' => __( 'Accounting' )
 				),
 			'public' => true,
@@ -50,6 +65,17 @@
 			array(
 				'labels' => array(
 					'name' => __( '136 Funds' ),
+					'singular_name' => __( '136 Funds' )
+				),
+			'public' => true,
+			'has_archive' => true,
+			)
+		);
+
+		register_post_type( 'award-management',
+			array(
+				'labels' => array(
+					'name' => __( 'award management' ),
 					'singular_name' => __( '136 Funds' )
 				),
 			// 'taxonomies' => array('category'), 

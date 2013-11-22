@@ -90,7 +90,6 @@ ul#menu-main-navigation.menu li.current-menu-item a {
 
 .whitebox {
 	padding: 0 8px;
-	/*margin: 0 auto 20px;*/
 	margin-bottom: 40px;
 	background: white;
 	width: 80%;
@@ -98,7 +97,7 @@ ul#menu-main-navigation.menu li.current-menu-item a {
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	border-radius: 8px;
-	/*float: left;*/
+
 }
 .whitebox:after { 
    content: "."; 
@@ -132,6 +131,11 @@ ul.contact-info li {
 	list-style-type: disc;
 }
 
+
+
+.page section {
+	display:none;
+}
 .page section > h2, .page section > h3 {
 	display: inline-block;
 }
@@ -193,4 +197,29 @@ ul.contact-info li {
 .page-nav-selected {
 	color: #44BBFF;
 	font-weight: bold;
+}
+.page-info {
+	float: left;
+	width: 40%;
+	clear: right;
+}
+
+.page-explanation {
+	float: right;
+	padding: 0 8px;	
+	margin-bottom: 40px;
+	background: white;
+	width: 56%;
+	border: 1px solid #f1f1f1;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+.page-explanation:after { 
+   content: '.'; 
+   visibility: hidden; 
+   display: block;
+   width: 100%; 
+   height: 0; 
+   clear: both;
 }

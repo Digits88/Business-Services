@@ -7,20 +7,20 @@ $(function() {
 		window.scrollTo(0, 0);
 
 		currentSelection = window.location.hash;
-		$("#page-intro-but").show();
+		// $("#page-intro-but").show();
 
 		$("#page-intro").hide();
 
 		$(currentSelection).show();
 
-		$('#sub-nav a[href='+currentSelection+']').addClass('page-nav-selected');
+		$('#sub-nav a[href='+currentSelection+']').parent().addClass('page-nav-selected');
 
 	}
 	
 	$("#sub-nav a").on("click", function(e) {
 
 		e.preventDefault();
-		$("#page-intro-but").show();
+		// $("#page-intro-but").show();
 		if(currentSelection && currentSelection !== $(this).attr('href')) {
 			$(currentSelection).hide();
 
@@ -42,9 +42,9 @@ $(function() {
 		}
 		
 		
-		$("#sub-nav a.page-nav-selected").removeClass('page-nav-selected');
+		$("#sub-nav li.page-nav-selected").removeClass('page-nav-selected');
 
-		$(this).addClass('page-nav-selected');
+		$(this).parent().addClass('page-nav-selected');
 		
 	});
 

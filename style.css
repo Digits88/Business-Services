@@ -18,6 +18,7 @@ body {
 }
 h1 {
 margin-bottom: 0.6em;	
+display: none;
 }
 h2 {
 	font-size: 1.2em;	
@@ -56,9 +57,6 @@ ul#menu-main-navigation.menu li a:hover {
 }
 ul#menu-main-navigation.menu li.current-menu-item a {
 	background: rgba(210, 210, 210, .1); 
-}
-#access ul ul {
-	display: none;
 }
 #content nav {
 	background: none;
@@ -135,12 +133,13 @@ ul.contact-info li {
 
 .page section {
 	display:none;
+	margin-top: 40px;
 }
 .page section > h2, .page section > h3 {
 	display: inline-block;
 }
 
-#sub-nav {
+/*#sub-nav {
 	width: 30%;
 	float: right;
 	margin-left: 15px;
@@ -163,9 +162,51 @@ ul.contact-info li {
     top: 1.2em;
     position: relative;
     transform:rotate(180deg);
-}
-#sub-nav-title {
+}*/
 
+#sub-nav {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	
+}
+#sub-nav ul {
+	list-style: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background: #363636;
+	height: 30px;
+}
+#sub-nav ul li {
+	line-height: 0;
+	margin: 0 0 3% 0;
+	top: 0;
+	padding: 0 3%;
+	border-right: 1px white solid;
+	display: inline;
+	vertical-align: middle;
+}
+#sub-nav ul li.page-nav-selected {
+	/*background: linear-gradient(to bottom, #CE9E56 0%, #D28E19 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+}
+#sub-nav ul li.page-nav-selected:before {
+    content: "";
+    border-color: transparent #CE9E56;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #363636;
+    position: relative;
+    height: 0;
+    width: 0;
+    left: 2em;
+    top: 2.8em;
+  	margin-left: -14px;
+}
+#sub-nav ul li a { 
+	color: white;
+	text-transform: lowercase;
 }
 #page-intro {
 	padding: 10px 8px;
@@ -178,12 +219,14 @@ ul.contact-info li {
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	border-radius: 8px;
+	display: none;
 }
 #page-intro-but {
 	display: none;
 	padding: 3px 8px;
 	background: linear-gradient(to bottom, #CE9E56 0%, #D28E19 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
 	margin-bottom: 20px;
+	display: none;
 }
 #page-intro-but:hover {
 	opacity: .8;
@@ -194,10 +237,10 @@ ul.contact-info li {
 #page-intro-but a:hover {
 	border-bottom: none;
 }
-.page-nav-selected {
+/*.page-nav-selected {
 	color: #44BBFF;
 	font-weight: bold;
-}
+}*/
 .page-info {
 	float: left;
 	width: 40%;

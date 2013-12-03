@@ -67,6 +67,7 @@ ul#menu-main-navigation.menu li.current-menu-item a {
 #access.fixedNav  {
 	background: #323232;
 	border-radius: 0;
+	margin-top: 0;
 }
 /*
 	Page specific
@@ -129,8 +130,6 @@ ul.contact-info li {
 	list-style-type: disc;
 }
 
-
-
 .page section {
 	display:none;
 	margin-top: 40px;
@@ -138,32 +137,6 @@ ul.contact-info li {
 .page section > h2, .page section > h3 {
 	display: inline-block;
 }
-
-/*#sub-nav {
-	width: 30%;
-	float: right;
-	margin-left: 15px;
-}
-#sub-nav ul {
-	list-style: none;
-}
-#sub-nav ul li {
-	line-height: 1.3;
-}
-#sub-nav ul li:before {
-    content: "";
-    border-color: transparent #CE9E56;
-    border-style: solid;
-    border-width: 0.35em 0 0.35em 0.45em;
-    display: block;
-    height: 0;
-    width: 0;
-    left: -1em;
-    top: 1.2em;
-    position: relative;
-    transform:rotate(180deg);
-}*/
-
 #sub-nav {
 	width: 100%;
 	position: absolute;
@@ -176,7 +149,7 @@ ul.contact-info li {
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	background: #363636;
+	background: linear-gradient(to bottom, #514d48 0%, #363636 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
 	height: 30px;
 }
 #sub-nav ul li {
@@ -187,9 +160,13 @@ ul.contact-info li {
 	border-right: 1px white solid;
 	display: inline;
 	vertical-align: middle;
+	position: relative;
 }
-#sub-nav ul li.page-nav-selected {
-	/*background: linear-gradient(to bottom, #CE9E56 0%, #D28E19 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+#sub-nav ul li:last-child {
+	border-right: none;
+}
+#sub-nav ul li.page-nav-selected a {
+	/*text-decoration: underline;*/
 }
 #sub-nav ul li.page-nav-selected:before {
     content: "";
@@ -197,20 +174,25 @@ ul.contact-info li {
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
 	border-top: 10px solid #363636;
-    position: relative;
+    position: absolute;
     height: 0;
     width: 0;
     left: 2em;
-    top: 2.8em;
-  	margin-left: -14px;
+    top: 2em;
 }
-#sub-nav ul li a { 
+#sub-nav ul li a{ 
 	color: white;
-	text-transform: lowercase;
+	margin-top: 2px;
+	padding: 3px 4px 3px;
+	width: 100%;
+	/*text-transform: lowercase;*/
+}
+#sub-nav ul li a:hover {
+	border-bottom: none;
+	color: #44BBFF;
 }
 #page-intro {
 	padding: 10px 8px;
-	/*margin: 0 auto 20px;*/
 	margin-bottom: 40px;
 	background: white;
 	width: 63%;

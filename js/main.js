@@ -4,39 +4,41 @@ $(function() {
 	
 	if(window.location.hash) {
 
-		window.scrollTo(0, 0);
-
 		currentSelection = window.location.hash;
-		// $("#page-intro-but").show();
-
-		$("#page-intro").hide();
-
-		$(currentSelection).show();
 
 		$('#sub-nav a[href='+currentSelection+']').parent().addClass('page-nav-selected');
 
+		$(currentSelection).slideDown();
+
+		// window.scrollTo(0, 0);
+
+	} else {
+		var currentSelection = $('#sub-nav ul li:first-child a').attr('href');
+		$(currentSelection).show();
+		$('#sub-nav a[href='+currentSelection+']').parent().addClass('page-nav-selected');
+		history.replaceState(null, '', currentSelection);
 	}
 	
 	$("#sub-nav a").on("click", function(e) {
 
 		e.preventDefault();
-		// $("#page-intro-but").show();
+
 		if(currentSelection && currentSelection !== $(this).attr('href')) {
-			$(currentSelection).hide();
-
-			  currentSelection = $(this).attr('href');
-
-			$(currentSelection).show();
+			newSelection = $(this).attr('href');
+			$(currentSelection).slideUp().fadeOut(function(e) {
+				currentSelection = newSelection;
+				$(currentSelection).slideDown();
+			});
 
 			history.replaceState(null, '', currentSelection);
 
 		} else {
 			currentSelection = $(this).attr('href');
 
-			$("#page-intro").hide();
+			// $("#page-intro").hide();
 			
 
-			$(currentSelection).show();
+			$(currentSelection).slideDown();
 
 			history.replaceState(null, '', currentSelection);
 		}
@@ -48,19 +50,19 @@ $(function() {
 		
 	});
 
-	$("#page-intro-but").on("click", function(e) {
+	// $("#page-intro-but").on("click", function(e) {
 
-		e.preventDefault();
-		$(this).hide();
-		$("#page-intro").show();
+	// 	e.preventDefault();
+	// 	$(this).hide();
+	// 	$("#page-intro").show();
 
-		currentSelection = '';
+	// 	currentSelection = '';
 		
-		$(".page section").css("display","none");
-		$("#sub-nav a.page-nav-selected").removeClass('page-nav-selected');
+	// 	$(".page section").css("display","none");
+	// 	$("#sub-nav a.page-nav-selected").removeClass('page-nav-selected');
 
-		history.replaceState(history.state, '', ' ');
+	// 	history.replaceState(history.state, '', ' ');
 
-	});
+	// });
 
 });

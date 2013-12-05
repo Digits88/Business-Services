@@ -27,15 +27,15 @@ get_header(); ?>
 					$args = array( 'post_type' => 'accounting', 'posts_per_page' => -1 );
 				} elseif(get_the_ID() == '15') {
 					$args = array( 'post_type' => '136-funds', 'posts_per_page' => -1 );
-				} elseif(get_the_ID() == '15') {
+				} elseif(get_the_ID() == '24') {
 					$args = array( 'post_type' => 'budget', 'posts_per_page' => -1 );
-				} elseif(get_the_ID() == '15') {
+				} elseif(get_the_ID() == '50') {
 					$args = array( 'post_type' => 'award-management', 'posts_per_page' => -1 );
-				} elseif(get_the_ID() == '15') {
+				} elseif(get_the_ID() == '47') {
 					$args = array( 'post_type' => 'purchasing', 'posts_per_page' => -1 );
-				} elseif(get_the_ID() == '15') {
+				} elseif(get_the_ID() == '26') {
 					$args = array( 'post_type' => 'travel', 'posts_per_page' => -1 );
-				} elseif(get_the_ID() == '15') {
+				} elseif(get_the_ID() == '153') {
 					$args = array( 'post_type' => 'forms', 'posts_per_page' => -1 );
 				}
 

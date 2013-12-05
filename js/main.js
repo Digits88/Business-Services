@@ -1,16 +1,16 @@
 $(function() {
 
 	var currentSelection = "";
-	
-	if(window.location.hash) {
+	var myLink =  document.location.toString();
+
+	if(myLink.match('#')) {
 
 		currentSelection = window.location.hash;
 
 		$('#sub-nav a[href='+currentSelection+']').parent().addClass('page-nav-selected');
 
 		$(currentSelection).slideDown();
-
-		// window.scrollTo(0, 0);
+		history.replaceState(null, '', currentSelection);
 
 	} else {
 		var currentSelection = $('#sub-nav ul li:first-child a').attr('href');
@@ -28,15 +28,12 @@ $(function() {
 			$(currentSelection).slideUp().fadeOut(function(e) {
 				currentSelection = newSelection;
 				$(currentSelection).slideDown();
+				history.replaceState(null, '', currentSelection);
 			});
-
-			history.replaceState(null, '', currentSelection);
+			
 
 		} else {
-			currentSelection = $(this).attr('href');
-
-			// $("#page-intro").hide();
-			
+			currentSelection = $(this).attr('href');		
 
 			$(currentSelection).slideDown();
 
@@ -49,20 +46,5 @@ $(function() {
 		$(this).parent().addClass('page-nav-selected');
 		
 	});
-
-	// $("#page-intro-but").on("click", function(e) {
-
-	// 	e.preventDefault();
-	// 	$(this).hide();
-	// 	$("#page-intro").show();
-
-	// 	currentSelection = '';
-		
-	// 	$(".page section").css("display","none");
-	// 	$("#sub-nav a.page-nav-selected").removeClass('page-nav-selected');
-
-	// 	history.replaceState(history.state, '', ' ');
-
-	// });
 
 });

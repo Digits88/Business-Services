@@ -27,7 +27,18 @@ get_header(); ?>
 					$args = array( 'post_type' => 'accounting', 'posts_per_page' => -1 );
 				} elseif(get_the_ID() == '15') {
 					$args = array( 'post_type' => '136-funds', 'posts_per_page' => -1 );
+				} elseif(get_the_ID() == '15') {
+					$args = array( 'post_type' => 'budget', 'posts_per_page' => -1 );
+				} elseif(get_the_ID() == '15') {
+					$args = array( 'post_type' => 'award-management', 'posts_per_page' => -1 );
+				} elseif(get_the_ID() == '15') {
+					$args = array( 'post_type' => 'purchasing', 'posts_per_page' => -1 );
+				} elseif(get_the_ID() == '15') {
+					$args = array( 'post_type' => 'travel', 'posts_per_page' => -1 );
+				} elseif(get_the_ID() == '15') {
+					$args = array( 'post_type' => 'forms', 'posts_per_page' => -1 );
 				}
+
 					
 					$loop = new WP_Query( $args );
 				?>

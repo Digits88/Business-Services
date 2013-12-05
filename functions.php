@@ -54,7 +54,7 @@
 			array(
 				'labels' => array(
 					'name' => __( 'accounting' ),
-					'singular_name' => __( 'Accounting' )
+					'singular_name' => __( 'accounting' )
 				),
 			'public' => true,
 			'has_archive' => true,
@@ -72,13 +72,57 @@
 			)
 		);
 
+		register_post_type( 'budget',
+			array(
+				'labels' => array(
+					'name' => __( 'budget' ),
+					'singular_name' => __( 'budget' )
+				),
+			'public' => true,
+			'has_archive' => true,
+			)
+		);
+
 		register_post_type( 'award-management',
 			array(
 				'labels' => array(
 					'name' => __( 'award management' ),
-					'singular_name' => __( '136 Funds' )
+					'singular_name' => __( 'award management' )
 				),
 			// 'taxonomies' => array('category'), 
+			'public' => true,
+			'has_archive' => true,
+			)
+		);
+
+		register_post_type( 'purchasing',
+			array(
+				'labels' => array(
+					'name' => __( 'purchasing' ),
+					'singular_name' => __( 'purchasing' )
+				),
+			'public' => true,
+			'has_archive' => true,
+			)
+		);
+
+		register_post_type( 'travel',
+			array(
+				'labels' => array(
+					'name' => __( 'travel' ),
+					'singular_name' => __( 'travel' )
+				),
+			'public' => true,
+			'has_archive' => true,
+			)
+		);
+
+		register_post_type( 'forms',
+			array(
+				'labels' => array(
+					'name' => __( 'forms' ),
+					'singular_name' => __( 'form' )
+				),
 			'public' => true,
 			'has_archive' => true,
 			)

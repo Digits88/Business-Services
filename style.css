@@ -193,36 +193,14 @@ ul.contact-info li {
 }
 #page-intro {
 	padding: 10px 8px;
-	margin-bottom: 40px;
+	margin: 40px 0;
 	background: white;
-	width: 63%;
-	float: left;
-	border: 1px solid #f1f1f1;
+	width: 90%;
+/*	border: 1px solid #f1f1f1;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
-	border-radius: 8px;
-	display: none;
+	border-radius: 8px;*/
 }
-#page-intro-but {
-	display: none;
-	padding: 3px 8px;
-	background: linear-gradient(to bottom, #CE9E56 0%, #D28E19 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
-	margin-bottom: 20px;
-	display: none;
-}
-#page-intro-but:hover {
-	opacity: .8;
-}
-#page-intro-but a {
-	color: white;
-}
-#page-intro-but a:hover {
-	border-bottom: none;
-}
-/*.page-nav-selected {
-	color: #44BBFF;
-	font-weight: bold;
-}*/
 .page-info {
 	float: left;
 	width: 40%;

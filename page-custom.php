@@ -21,7 +21,7 @@ get_header(); ?>
 				<div id="page-intro">
 					<?php the_content(); ?>
 				</div>
-				<button id="page-intro-but"><a href="#">page info &#x25BC</a></button>
+
 				<?php
 				if( get_the_ID() == '13'){
 					$args = array( 'post_type' => 'accounting', 'posts_per_page' => -1 );

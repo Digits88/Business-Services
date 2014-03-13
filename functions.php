@@ -47,9 +47,7 @@
 	add_shortcode( 'list_links', 'list_links_func' );
 
 
-	add_action( 'init', 'create_post_type' );
-
-	function create_post_type() {
+	function create_custom_post_type() {
 		register_post_type( 'accounting',
 			array(
 				'labels' => array(
@@ -128,6 +126,8 @@
 			)
 		);
 	}
+
+	add_action( 'init', 'create_custom_post_type' );
 
 
 ?>

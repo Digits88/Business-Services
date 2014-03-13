@@ -28,6 +28,18 @@ Version:        0.1.0
    height: 0; 
    clear: both;
 }
+.contact-bio {
+	padding: 10px 8px 6px;
+	/*margin: 0 auto 20px;*/
+	margin: 0 8px 20px 0;
+	background: white;
+	width: 29%;
+	border: 1px solid #f1f1f1;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	float: left;
+}
 .page-explanation {
 	float: right;
 	padding: 0 8px;	

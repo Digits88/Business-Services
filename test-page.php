@@ -26,6 +26,8 @@ get_header();
 			    while ( have_rows('content_row') ) : the_row();
 			 
  					the_sub_field('accounting_type_title');
+ 					the_sub_field('resource_links');
+ 					the_sub_field('resource_description');
 			 
 			    endwhile;
 			 
@@ -36,7 +38,7 @@ get_header();
 			endif;
  
 			?>
-			<p>This is the_content()  <?php the_content(''); ?></p>
+			<p><?php the_content(''); ?></p>
  
 		<?php endwhile; // end of the loop. ?>
  

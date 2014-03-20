@@ -19,21 +19,22 @@ get_header();
 			<h1></h1>
 
 			<?php 			
-			$values = get_field('content_row');
-			if($values)
-			{
-				echo '<ul>';
+			// check if the flexible content field has rows of data
+			if( have_rows('content_row') ):
 			 
-				foreach($values as $value)
-				{
-					echo '<li>' . $value . '</li>';
-				}
+			     // loop through the rows of data
+			    while ( have_rows('content_row') ) : the_row();
 			 
-				echo '</ul>';
-			}
+ 					the_sub_field('accounting_type_title');
 			 
-			// always good to see exactly what you are working with
-			var_dump($values);
+			    endwhile;
+			 
+			else :
+			 
+			    // no layouts found
+			 
+			endif;
+ 
 			?>
 			<p>This is the_content()  <?php the_content(''); ?></p>
  

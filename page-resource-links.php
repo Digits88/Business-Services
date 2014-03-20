@@ -20,10 +20,10 @@ get_header();
 			<p><?php the_content(); ?></p>
 			<?php 			
 			// check if the flexible content field has rows of data
-			if( have_rows('content_row') ):
+			if( have_rows('content_block') ):
 			 
 			     // loop through the rows of data
-			    while ( have_rows('content_row') ) : the_row();
+			    while ( have_rows('content_block') ) : the_row();
 			 
  					?>
  					<h2><?php

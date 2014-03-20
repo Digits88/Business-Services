@@ -40,16 +40,20 @@ Version:        0.1.0
 	border-radius: 8px;
 	float: left;
 }
+.links {
+	max-width: 55%;
+	float: left;
+}
 .page-explanation {
 	float: right;
 	padding: 0 8px;	
 	margin-bottom: 40px;
 	background: white;
-	width: 56%;
+	max-width: 40%;
 	border: 1px solid #f1f1f1;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	border-radius: 8px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
 }
 .page-explanation:after { 
    content: '.'; 

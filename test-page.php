@@ -16,8 +16,8 @@ get_header();
  
 		<?php while ( have_posts() ) : the_post(); ?>
  
-			<h1>The title here</h1>
-
+			<h1><?php the_title(); ?></h1>
+			<p><?php the_content(); ?></p>
 			<?php 			
 			// check if the flexible content field has rows of data
 			if( have_rows('content_row') ):
@@ -25,7 +25,7 @@ get_header();
 			     // loop through the rows of data
 			    while ( have_rows('content_row') ) : the_row();
 			 
- 					the_sub_field('accounting_type_title');
+ 					echo'<h2>'.the_sub_field('accounting_type_title').'</h2>';
  					the_sub_field('resource_links');
  					the_sub_field('resource_description');
 			 
@@ -38,7 +38,7 @@ get_header();
 			endif;
  
 			?>
-			<p><?php the_content(''); ?></p>
+
  
 		<?php endwhile; // end of the loop. ?>
  

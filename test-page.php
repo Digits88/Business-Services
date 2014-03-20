@@ -18,9 +18,24 @@ get_header();
  
 			<h1></h1>
 
- 			<?php the_field('content_row'); ?>
- 			<?php get_field('content_row'); ?>
-			<p><?php the_content(''); ?></p>
+			<?php 			
+			$values = get_field('content_row');
+			if($values)
+			{
+				echo '<ul>';
+			 
+				foreach($values as $value)
+				{
+					echo '<li>' . $value . '</li>';
+				}
+			 
+				echo '</ul>';
+			}
+			 
+			// always good to see exactly what you are working with
+			var_dump($values);
+			?>
+			<p>This is the_content()  <?php the_content(''); ?></p>
  
 		<?php endwhile; // end of the loop. ?>
  

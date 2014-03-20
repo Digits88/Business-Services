@@ -16,7 +16,7 @@ get_header();
  
 		<?php while ( have_posts() ) : the_post(); ?>
  
-			<h1></h1>
+			<h1>The title here</h1>
 
 			<?php 			
 			// check if the flexible content field has rows of data

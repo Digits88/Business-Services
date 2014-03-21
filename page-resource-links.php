@@ -28,13 +28,13 @@ get_header();
  					?>
  					<h2><?php
  						 the_sub_field('sub_title') ?>
- 					</h2><?php ;
+ 					</h2><?php ;  
  					?>
  					<div class="links"><?php
  					the_sub_field('resource_links'); ?>
  					</div><?php ;
  					?>
- 					<div class="page-explanation"><?php
+ 					<div class="explanation"><?php
  						the_sub_field('resource_description'); ?>
 					</div><?php ;
 			    endwhile;
